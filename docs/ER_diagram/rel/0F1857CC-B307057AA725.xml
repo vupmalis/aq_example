@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<relationalModel class="oracle.dbtools.crest.model.design.relational.RelationalDesign" name="Event Handler" id="0F1857CC-AB4F-1D64-D0AD-B307057AA725" mainViewID="CCE11621-1995-597C-36A4-2F4FEBBFB6EB">
+<createdBy>vupma</createdBy>
+<createdTime>2020-02-23 16:07:52 UTC</createdTime>
+<ownerDesignName>EventHandlerER</ownerDesignName>
+<shouldBeOpen>true</shouldBeOpen>
+<selectedRDBMSSite>32076570-2523-435C-2E92-BF29817DFF70</selectedRDBMSSite>
+</relationalModel>

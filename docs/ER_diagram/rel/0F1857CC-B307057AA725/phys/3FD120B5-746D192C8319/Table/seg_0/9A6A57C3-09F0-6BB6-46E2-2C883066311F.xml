@@ -1,0 +1,86 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="Tasks" directorySegmentName="seg_0" id="9A6A57C3-09F0-6BB6-46E2-2C883066311F">
+<createdBy>vupma</createdBy>
+<createdTime>2020-02-23 21:51:07 UTC</createdTime>
+<ownerDesignName>ER_diagram</ownerDesignName>
+<schemaObject>812B95DA-DCAA-09E4-245D-6C4912884C3A</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="task_code" id="39C45D19-2CCE-56E9-5413-777A4DE91BAC">
+<createdBy>vupma</createdBy>
+<createdTime>2020-02-23 21:51:07 UTC</createdTime>
+<ownerDesignName>ER_diagram</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="assigned_to" id="5066188A-5EDB-584B-86AA-11BB1CD9ED05">
+<createdBy>vupma</createdBy>
+<createdTime>2020-02-23 21:51:07 UTC</createdTime>
+<ownerDesignName>ER_diagram</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="creation_date" id="5857EB20-E666-BBB9-F479-B2681AE0E812">
+<createdBy>vupma</createdBy>
+<createdTime>2020-02-23 21:51:07 UTC</createdTime>
+<ownerDesignName>ER_diagram</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="status" id="5AD7EACF-B84C-A45B-67B4-E7C375C076A8">
+<createdBy>vupma</createdBy>
+<createdTime>2020-02-25 16:36:44 UTC</createdTime>
+<ownerDesignName>ER_diagram</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="description" id="92BB1C45-7E97-1120-98C0-B408C56EBA10">
+<createdBy>vupma</createdBy>
+<createdTime>2020-02-23 21:51:07 UTC</createdTime>
+<ownerDesignName>ER_diagram</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="due_date" id="A232C621-C649-44CA-B5E1-186C93EB8AE6">
+<createdBy>vupma</createdBy>
+<createdTime>2020-02-23 21:51:07 UTC</createdTime>
+<ownerDesignName>ER_diagram</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="Id" id="CE804C4B-C183-F288-2BD8-979B83056104">
+<createdBy>vupma</createdBy>
+<createdTime>2020-02-23 21:51:07 UTC</createdTime>
+<ownerDesignName>ER_diagram</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="created_by" id="E5949B0E-5810-DAE0-9E66-B05057C89C6E">
+<createdBy>vupma</createdBy>
+<createdTime>2020-02-23 21:51:07 UTC</createdTime>
+<ownerDesignName>ER_diagram</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="tsk_wrk_FK1" id="571AAC40-845D-9D1E-B1FD-01ECD69BC607">
+<createdBy>vupma</createdBy>
+<createdTime>2020-02-23 21:51:07 UTC</createdTime>
+<ownerDesignName>ER_diagram</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="tsk_wrk_FK2" id="C57EA068-C926-3195-37DC-D7F0C6247352">
+<createdBy>vupma</createdBy>
+<createdTime>2020-02-23 21:51:07 UTC</createdTime>
+<ownerDesignName>ER_diagram</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="tsk_tcf_FK" id="F991B634-0E49-7BFF-6C3E-4FE616AF40E6">
+<createdBy>vupma</createdBy>
+<createdTime>2020-02-23 21:51:07 UTC</createdTime>
+<ownerDesignName>ER_diagram</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="tsk_pk" id="65E26322-D88D-DD49-C13C-E9AF911E687E">
+<createdBy>vupma</createdBy>
+<createdTime>2020-02-23 21:51:07 UTC</createdTime>
+<ownerDesignName>ER_diagram</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.storage.oracle.TableCheckConstraintOracle">
+<TableCheckConstraint name="tsk_CK1" id="ABAE0F9C-B655-55FF-698E-D9F13D895864">
+<createdBy>vupma</createdBy>
+<createdTime>2020-02-25 16:37:51 UTC</createdTime>
+<ownerDesignName>ER_diagram</ownerDesignName>
+</TableCheckConstraint>
+</tableCheckConstraints>
+</TableProxyOraclev12c>

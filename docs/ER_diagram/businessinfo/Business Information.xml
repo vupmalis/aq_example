@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<BusinessInfoDesign class="oracle.dbtools.crest.model.businessinfo.BusinessInfoDesign" name="Business Information" id="8D85248C-CBA8-B50D-5B98-0A306E8CCFDB">
+<createdBy>vupma</createdBy>
+<createdTime>2020-02-23 16:01:41 UTC</createdTime>
+<ownerDesignName>EventHandlerER</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</BusinessInfoDesign>

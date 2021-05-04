@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="ER_diagram" id="47C86E30-72BC-10EF-0D79-E422CFF3384C" version="3.5">
+<createdBy>vupma</createdBy>
+<createdTime>2020-02-23 16:01:41 UTC</createdTime>
+<ownerDesignName>EventHandlerER</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>47C86E30-72BC-10EF-0D79-E422CFF3384C</designId>
+</OSDM_Design>
