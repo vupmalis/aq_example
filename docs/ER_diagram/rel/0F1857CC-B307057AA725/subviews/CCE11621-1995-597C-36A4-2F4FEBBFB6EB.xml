@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Diagram class="oracle.dbtools.crest.swingui.relational.DPVRelational" name="Event Handler" id="CCE11621-1995-597C-36A4-2F4FEBBFB6EB">
+<Diagram class="oracle.dbtools.crest.swingui.relational.DPVRelational" name="TaskManager" id="CCE11621-1995-597C-36A4-2F4FEBBFB6EB">
 <createdBy>vupma</createdBy>
 <modifiedBy>vupma</modifiedBy>
 <createdTime>2020-02-23 16:08:16 UTC</createdTime>
@@ -21,6 +21,10 @@
 <OView class="oracle.dbtools.crest.swingui.relational.TVTable" oid="9A6A57C3-09F0-6BB6-46E2-2C883066311F" otype="Table" vid="EFFF3E81-7881-8628-18FB-5F5D1B6F9079">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
 <bounds x="500" y="302" width="237" height="212"/>
+</OView>
+<OView class="oracle.dbtools.crest.swingui.relational.TVTable" oid="9D7FB623-183A-28EA-225F-0B8481641A12" otype="Table" vid="A8546852-8232-BC4B-01DA-52D4632386D1">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="785" y="58" width="247" height="165"/>
 </OView>
 <OView class="oracle.dbtools.crest.swingui.TVNote" oid="C0DFFC1E-8ABC-675A-DD16-DD74EC7CB3AD" otype="Note" vid="95B74673-A129-EDB5-4222-15950C3624A7">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>

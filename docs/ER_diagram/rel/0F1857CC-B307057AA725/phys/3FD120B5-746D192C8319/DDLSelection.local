@@ -2,4 +2,17 @@
 <oracle.dbtools.crest.model.design.storage.oracle.v12c.StorageDesignOraclev12c>
    <object objectID="MDSYS" markedGenerate="false"/>
    <object objectID="PUBLIC" markedGenerate="false"/>
+   <object objectID="A4D595F7-3803-8047-1244-CC7A8F7F5C3D" markedGenerate="false"/>
+   <object objectID="36BC0B54-96D2-21D2-0565-8B28198C6627" markedGenerate="false"/>
+   <object objectID="8929964F-E7AB-8DEA-32EC-F41E4CA7EB19" markedGenerate="false"/>
+   <object objectID="97B8A084-1F78-1735-59AE-191898358EEF" markedGenerate="false"/>
+   <object objectID="65E26322-D88D-DD49-C13C-E9AF911E687E" markedGenerate="false"/>
+   <object objectID="F991B634-0E49-7BFF-6C3E-4FE616AF40E6" markedGenerate="false"/>
+   <object objectID="571AAC40-845D-9D1E-B1FD-01ECD69BC607" markedGenerate="false"/>
+   <object objectID="C57EA068-C926-3195-37DC-D7F0C6247352" markedGenerate="false"/>
+   <object objectID="C5B5D9B8-D967-D61E-FBAF-AE58E5281C48" markedGenerate="false"/>
+   <object objectID="E2B906F6-CE16-105F-3762-64F2E87BAC8D" markedGenerate="false"/>
+   <object objectID="FDA17649-E454-8DDE-2F32-ECB3590EFAD9" markedGenerate="false"/>
+   <object objectID="9A6A57C3-09F0-6BB6-46E2-2C883066311F" markedGenerate="false"/>
+   <object objectID="3D8545AC-73BA-C3DE-341E-0DE4DF69250B" markedGenerate="false"/>
 </oracle.dbtools.crest.model.design.storage.oracle.v12c.StorageDesignOraclev12c>
