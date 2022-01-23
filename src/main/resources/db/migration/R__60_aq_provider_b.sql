@@ -1,31 +1,32 @@
 CREATE OR REPLACE PACKAGE BODY aq_provider AS
 
   PROCEDURE create_queue_table (
-    p_queue_table          IN   VARCHAR2,
-    p_queue_payload_type   IN   VARCHAR2
+    p_queue_configuration IN aq_common.t_aq_config
   ) IS
     --ORA-24001: cannot create QUEUE_TABLE, <table> already exists
     e_queue_table_exists EXCEPTION;
     PRAGMA exception_init ( e_queue_table_exists, -24001 );
   BEGIN
-    dbms_aqadm.create_queue_table(queue_table => p_queue_table, queue_payload_type => p_queue_payload_type, storage_clause => 'TABLESPACE tbs_aq'
-    , sort_list => 'PRIORITY,ENQ_TIME');
+    dbms_aqadm.create_queue_table(
+      queue_table => p_queue_configuration.queue_table_name
+     ,queue_payload_type => p_queue_configuration.payload_type
+     ,storage_clause => 'TABLESPACE '||p_queue_configuration.table_space
+     ,sort_list => 'PRIORITY,ENQ_TIME'
+    );
   EXCEPTION
     WHEN e_queue_table_exists THEN
       NULL;
   END;
 
-  PROCEDURE create_queue (
-    p_queue_table          IN   VARCHAR2,
-    p_queue_payload_type   IN   VARCHAR2,
-    p_queue_name           IN   VARCHAR2
+  PROCEDURE create_queue_objects (
+    p_queue_configuration IN aq_common.t_aq_config
   ) IS
     --ORA-24006: cannot create QUEUE, <queue name> already exists
     e_queue_exists EXCEPTION;
     PRAGMA exception_init ( e_queue_exists, -24006 );
   BEGIN
-    create_queue_table(p_queue_table => p_queue_table, p_queue_payload_type => p_queue_payload_type);
-    dbms_aqadm.create_queue(queue_name => p_queue_table, queue_table => p_queue_table);
+    create_queue_table(p_queue_configuration => p_queue_configuration);
+    dbms_aqadm.create_queue(queue_name => p_queue_configuration.queue_table_name, queue_table => p_queue_configuration.queue_table_name);
   EXCEPTION
     WHEN e_queue_exists THEN
       NULL;
@@ -58,8 +59,7 @@ CREATE OR REPLACE PACKAGE BODY aq_provider AS
   END;
 
   PROCEDURE drop_queue (
-    p_queue_table   IN   VARCHAR2,
-    p_queue_name    IN   VARCHAR2
+    p_queue_configuration IN aq_common.t_aq_config
   ) IS
     -- ORA-24010: QUEUE <queue> does not exist
 
@@ -71,15 +71,15 @@ CREATE OR REPLACE PACKAGE BODY aq_provider AS
     PRAGMA exception_init ( e_queue_table_not_exists, -24002 );
   BEGIN
     BEGIN
-      stop_queue(p_queue_name => p_queue_name);
-      dbms_aqadm.drop_queue(queue_name => p_queue_name);
+      stop_queue(p_queue_name => p_queue_configuration.queue_name);
+      dbms_aqadm.drop_queue(queue_name => p_queue_configuration.queue_name);
     EXCEPTION
       WHEN e_queue_does_not_exists THEN
         NULL;
     END;
 
     BEGIN
-      dbms_aqadm.drop_queue_table(queue_table => p_queue_table);
+      dbms_aqadm.drop_queue_table(queue_table => p_queue_configuration.queue_table_name);
     EXCEPTION
       WHEN e_queue_table_not_exists THEN
         NULL;
@@ -87,25 +87,32 @@ CREATE OR REPLACE PACKAGE BODY aq_provider AS
 
   END;
 
-  PROCEDURE create_queues IS
+  PROCEDURE create_queues(p_queues_configuration IN aq_common.t_aq_configs) IS
   BEGIN
-    create_queue(p_queue_table => c_aq_changed_tasks_table, p_queue_payload_type => c_aq_changed_tasks_payload_type, p_queue_name
-    => c_aq_changed_tasks);
+    FOR i IN p_queues_configuration.first..p_queues_configuration.last LOOP
+      create_queue_objects(p_queue_configuration => p_queues_configuration(i));
+    END LOOP;
   END;
 
-  PROCEDURE drop_queues IS
+  PROCEDURE drop_queues(p_queues_configuration IN aq_common.t_aq_configs) IS
   BEGIN
-    drop_queue(p_queue_table => c_aq_changed_tasks_table, p_queue_name => c_aq_changed_tasks_full_name);
+    FOR i IN p_queues_configuration.first..p_queues_configuration.last LOOP
+      drop_queue(p_queue_configuration => p_queues_configuration(i));
+    END LOOP;
   END;
 
-  PROCEDURE stop_queues IS
+  PROCEDURE stop_queues(p_queues_configuration IN aq_common.t_aq_configs) IS
   BEGIN
-    stop_queue(p_queue_name => c_aq_changed_tasks_full_name);
+    FOR i IN p_queues_configuration.first..p_queues_configuration.last LOOP 
+      stop_queue(p_queue_name => p_queues_configuration(i).full_queue_name);
+    END LOOP;
   END;
 
-  PROCEDURE start_queues IS
-  BEGIN
-    start_queue(p_queue_name => c_aq_changed_tasks_full_name);
+  PROCEDURE start_queues(p_queues_configuration IN aq_common.t_aq_configs) IS
+  BEGIN   
+    FOR i IN p_queues_configuration.first..p_queues_configuration.last LOOP      
+      start_queue(p_queue_name => p_queues_configuration(i).full_queue_name);
+    END LOOP;    
   END;
 
   PROCEDURE add_task_to_queue (
@@ -122,4 +129,23 @@ CREATE OR REPLACE PACKAGE BODY aq_provider AS
     payload => v_task, msgid => v_msg_id);
   END;
 
+  PROCEDURE create_queue (
+    p_queue_configuration IN aq_common.t_aq_config
+  ) IS
+    --ORA-24006: cannot create QUEUE, <queue name> already exists
+    e_queue_exists EXCEPTION;
+    PRAGMA exception_init ( e_queue_exists, -24006 );
+  BEGIN
+    create_queue_table(p_queue_configuration => p_queue_configuration);
+    dbms_aqadm.create_queue(queue_name => p_queue_configuration.queue_name, queue_table => p_queue_configuration.queue_table_name);
+  EXCEPTION
+    WHEN e_queue_exists THEN
+      NULL;
+  END;
+  
+  PROCEDURE create_queues IS
+  BEGIN
+    create_queues(p_queues_configuration => aq_common.c_aq_configs);
+  END;
+  
 END aq_provider;

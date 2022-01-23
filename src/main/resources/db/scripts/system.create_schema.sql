@@ -10,3 +10,7 @@ GRANT UNLIMITED TABLESPACE TO "taskhandler";
 grant AQ_ADMINISTRATOR_ROLE to "taskhandler"; 
 grant execute on DBMS_AQADM to "taskhandler";
 grant execute on DBMS_AQ to "taskhandler";
+
+CREATE TABLESPACE T_TASK 
+   DATAFILE 't_task_data.dbf' 
+   SIZE 10m;
