@@ -1,0 +1,4 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.relational.RelationalDesign>
+   <object objectType="main_view" objectID="CCE11621-1995-597C-36A4-2F4FEBBFB6EB" name="TaskManager" visible="true"/>
+</oracle.dbtools.crest.model.design.relational.RelationalDesign>

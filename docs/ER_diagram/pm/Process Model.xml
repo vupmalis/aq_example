@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<ProcessModel class="oracle.dbtools.crest.model.design.process.ProcessModel" name="Process Model" id="2DDEC69B-300C-37DF-A2D8-F71666718E8A">
+<createdBy>vupma</createdBy>
+<createdTime>2020-02-23 16:01:41 UTC</createdTime>
+<ownerDesignName>EventHandlerER</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</ProcessModel>

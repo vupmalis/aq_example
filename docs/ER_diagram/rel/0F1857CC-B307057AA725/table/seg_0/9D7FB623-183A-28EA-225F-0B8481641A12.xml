@@ -1,0 +1,115 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9D7FB623-183A-28EA-225F-0B8481641A12" schemaObject="812B95DA-DCAA-09E4-245D-6C4912884C3A" name="Debug_logs">
+<createdBy>vupma</createdBy>
+<createdTime>2021-05-04 08:51:41 UTC</createdTime>
+<ownerDesignName>ER_diagram</ownerDesignName>
+<ordsAlias>table_4</ordsAlias>
+<useDDLTransformationScript>true</useDDLTransformationScript>
+<abbreviation>dlg</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id" id="198E1679-654A-694F-5FE7-4B812D21104E">
+<createdBy>vupma</createdBy>
+<createdTime>2021-05-04 09:09:11 UTC</createdTime>
+<ownerDesignName>ER_diagram</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>2DAE0292-DE81-1C59-94FB-A3D196DBAAFE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Log_type" id="9953D0F3-06B2-2584-5F57-ED4A343F9B24">
+<createdBy>vupma</createdBy>
+<createdTime>2021-05-04 09:09:11 UTC</createdTime>
+<ownerDesignName>ER_diagram</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>F4A31C31-E70A-B85E-7977-03FB5C32280A</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Message" id="14705C68-7A41-72E8-FCF7-68CCAF0A19B9">
+<createdBy>vupma</createdBy>
+<createdTime>2021-05-04 09:09:11 UTC</createdTime>
+<ownerDesignName>ER_diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2000 CHAR</dataTypeSize>
+<ownDataTypeParameters>2000 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Log_date" id="E08B6658-7856-780A-1907-C952EE095FF6">
+<createdBy>vupma</createdBy>
+<createdTime>2021-05-04 09:23:28 UTC</createdTime>
+<ownerDesignName>ER_diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<defaultValue>SYSTIMESTAMP</defaultValue>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Context" id="6117A76A-1714-5F0A-AB59-557249E6502A">
+<createdBy>vupma</createdBy>
+<createdTime>2021-05-04 09:09:11 UTC</createdTime>
+<ownerDesignName>ER_diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200 CHAR</dataTypeSize>
+<ownDataTypeParameters>200 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="User_context" id="E83EF387-FAD4-72C3-906C-825FE26AA056">
+<createdBy>vupma</createdBy>
+<createdTime>2021-05-04 09:09:11 UTC</createdTime>
+<ownerDesignName>ER_diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200 CHAR</dataTypeSize>
+<ownDataTypeParameters>200 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Table_name" id="97286455-8A82-7589-0F83-36FAAC9F01B5">
+<createdBy>vupma</createdBy>
+<createdTime>2021-05-04 09:13:11 UTC</createdTime>
+<ownerDesignName>ER_diagram</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>32 CHAR</dataTypeSize>
+<ownDataTypeParameters>32 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Record_Id" id="D6542342-D6A8-3E1B-5031-E52EE92A16F7">
+<createdBy>vupma</createdBy>
+<createdTime>2021-05-04 09:13:11 UTC</createdTime>
+<ownerDesignName>ER_diagram</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="807F83D7-29B7-3A98-37F0-88FD3925C001" name="Debug_logs_PK">
+<createdBy>vupma</createdBy>
+<createdTime>2021-05-04 09:09:11 UTC</createdTime>
+<ownerDesignName>ER_diagram</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="198E1679-654A-694F-5FE7-4B812D21104E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

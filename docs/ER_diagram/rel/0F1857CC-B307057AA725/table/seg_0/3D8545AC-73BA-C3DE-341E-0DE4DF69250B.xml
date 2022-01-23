@@ -1,0 +1,57 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="3D8545AC-73BA-C3DE-341E-0DE4DF69250B" schemaObject="812B95DA-DCAA-09E4-245D-6C4912884C3A" name="Workers">
+<createdBy>vupma</createdBy>
+<createdTime>2020-02-23 21:44:12 UTC</createdTime>
+<ownerDesignName>ER_diagram</ownerDesignName>
+<ordsAlias>table_3</ordsAlias>
+<abbreviation>wrk</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id" id="2199015D-1208-67E9-2C0D-35C36A4FBA01">
+<createdBy>vupma</createdBy>
+<createdTime>2020-02-23 21:45:49 UTC</createdTime>
+<ownerDesignName>ER_diagram</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>2DAE0292-DE81-1C59-94FB-A3D196DBAAFE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Name" id="7FA42608-4895-D72D-6272-07BC55139A8B">
+<createdBy>vupma</createdBy>
+<createdTime>2020-02-23 21:45:49 UTC</createdTime>
+<ownerDesignName>ER_diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C5B5D9B8-D967-D61E-FBAF-AE58E5281C48" name="wrk_PK">
+<createdBy>vupma</createdBy>
+<createdTime>2020-02-23 21:45:49 UTC</createdTime>
+<ownerDesignName>ER_diagram</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2199015D-1208-67E9-2C0D-35C36A4FBA01"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E2B906F6-CE16-105F-3762-64F2E87BAC8D" name="wrk_UK">
+<createdBy>vupma</createdBy>
+<createdTime>2020-02-23 21:45:49 UTC</createdTime>
+<ownerDesignName>ER_diagram</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7FA42608-4895-D72D-6272-07BC55139A8B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,67 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="Task_configurations" directorySegmentName="seg_0" id="FDA17649-E454-8DDE-2F32-ECB3590EFAD9">
+<createdBy>vupma</createdBy>
+<createdTime>2020-02-23 21:51:07 UTC</createdTime>
+<ownerDesignName>ER_diagram</ownerDesignName>
+<schemaObject>812B95DA-DCAA-09E4-245D-6C4912884C3A</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="task_code" id="6A2EE4D2-8E87-4C2E-F250-5A02FD0C1530">
+<createdBy>vupma</createdBy>
+<createdTime>2020-02-23 21:51:07 UTC</createdTime>
+<ownerDesignName>ER_diagram</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="priority" id="7CE96BA3-7AAB-C909-8CF3-9CEA360B00BA">
+<createdBy>vupma</createdBy>
+<createdTime>2021-05-04 08:39:28 UTC</createdTime>
+<ownerDesignName>ER_diagram</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="task_due_days" id="B8309C49-F55E-3509-4BD8-D83C7A73D67B">
+<createdBy>vupma</createdBy>
+<createdTime>2021-05-04 08:38:34 UTC</createdTime>
+<ownerDesignName>ER_diagram</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="manual_task" id="BFAFC457-C19A-570A-E68A-AB9D312E79C7">
+<createdBy>vupma</createdBy>
+<createdTime>2020-02-23 21:51:07 UTC</createdTime>
+<ownerDesignName>ER_diagram</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="task_name" id="D0C59890-FB1C-FEAF-DA2A-BCB0CC267875">
+<createdBy>vupma</createdBy>
+<createdTime>2020-02-23 21:51:07 UTC</createdTime>
+<ownerDesignName>ER_diagram</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="next_task_code" id="D1E84FE5-4D08-BA47-1447-995B5CFE4C67">
+<createdBy>vupma</createdBy>
+<createdTime>2021-05-04 08:38:34 UTC</createdTime>
+<ownerDesignName>ER_diagram</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="tcf_PK" id="8929964F-E7AB-8DEA-32EC-F41E4CA7EB19">
+<createdBy>vupma</createdBy>
+<createdTime>2020-02-23 21:51:07 UTC</createdTime>
+<ownerDesignName>ER_diagram</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.storage.oracle.TableCheckConstraintOracle">
+<TableCheckConstraint name="tcf_ck1" id="CEF9F3F6-C0E8-0882-844F-92F276C3A215">
+<createdBy>vupma</createdBy>
+<createdTime>2020-02-23 21:51:07 UTC</createdTime>
+<ownerDesignName>ER_diagram</ownerDesignName>
+</TableCheckConstraint>
+</tableCheckConstraints>
+<uniqueKeys>
+<UniqueKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UniqueOraclev10g" name="tcf_uk" id="97B8A084-1F78-1735-59AE-191898358EEF">
+<createdBy>vupma</createdBy>
+<createdTime>2020-02-23 21:51:07 UTC</createdTime>
+<ownerDesignName>ER_diagram</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</UniqueKey>
+</uniqueKeys>
+</TableProxyOraclev12c>

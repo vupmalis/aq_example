@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="FC4C003A-1120-A3CF-140B-103CB527375F" containerWithKeyObject="9A6A57C3-09F0-6BB6-46E2-2C883066311F" localFKIndex="F991B634-0E49-7BFF-6C3E-4FE616AF40E6" name="tsk_tcf_FK">
+<createdBy>vupma</createdBy>
+<createdTime>2020-02-23 17:04:50 UTC</createdTime>
+<ownerDesignName>ER_diagram</ownerDesignName>
+<referredTableLongName>taskmanager.Task_configurations</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>FDA17649-E454-8DDE-2F32-ECB3590EFAD9</referredTableID>
+<keyObject>8929964F-E7AB-8DEA-32EC-F41E4CA7EB19</keyObject>
+<referredKeyID>8929964F-E7AB-8DEA-32EC-F41E4CA7EB19</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>task_code</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

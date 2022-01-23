@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="F6C6FA3F-BFAC-C11A-869D-EF922A33F4C7" mainViewID="6E5939D9-B8C0-BAA2-7249-39EFE5FC4656">
+<createdBy>vupma</createdBy>
+<createdTime>2020-02-23 16:01:41 UTC</createdTime>
+<ownerDesignName>EventHandlerER</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>

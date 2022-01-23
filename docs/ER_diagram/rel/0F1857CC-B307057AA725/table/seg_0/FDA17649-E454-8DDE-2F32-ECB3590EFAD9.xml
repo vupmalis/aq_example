@@ -1,0 +1,112 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="FDA17649-E454-8DDE-2F32-ECB3590EFAD9" schemaObject="812B95DA-DCAA-09E4-245D-6C4912884C3A" name="Task_configurations">
+<createdBy>vupma</createdBy>
+<createdTime>2020-02-23 16:22:24 UTC</createdTime>
+<ownerDesignName>ER_diagram</ownerDesignName>
+<ordsAlias>table_1</ordsAlias>
+<abbreviation>tcf</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="task_code" id="6A2EE4D2-8E87-4C2E-F250-5A02FD0C1530">
+<createdBy>vupma</createdBy>
+<createdTime>2020-02-23 16:23:27 UTC</createdTime>
+<commentInRDBMS>Task code</commentInRDBMS>
+<ownerDesignName>ER_diagram</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>BADB3AD1-89BA-EDA0-11EA-B7C6964C5257</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="task_name" id="D0C59890-FB1C-FEAF-DA2A-BCB0CC267875">
+<createdBy>vupma</createdBy>
+<createdTime>2020-02-23 16:23:27 UTC</createdTime>
+<commentInRDBMS>Task name</commentInRDBMS>
+<ownerDesignName>ER_diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="manual_task" id="BFAFC457-C19A-570A-E68A-AB9D312E79C7">
+<createdBy>vupma</createdBy>
+<createdTime>2020-02-23 16:28:27 UTC</createdTime>
+<commentInRDBMS>Flag, if the task is manual(Y) or automatic (N)</commentInRDBMS>
+<ownerDesignName>ER_diagram</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>89B4B79B-7D0F-BDAD-3F98-1F2327D0A704</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="task_due_days" id="B8309C49-F55E-3509-4BD8-D83C7A73D67B">
+<createdBy>vupma</createdBy>
+<createdTime>2021-05-03 19:00:18 UTC</createdTime>
+<ownerDesignName>ER_diagram</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="next_task_code" id="D1E84FE5-4D08-BA47-1447-995B5CFE4C67">
+<createdBy>vupma</createdBy>
+<createdTime>2021-05-03 19:00:18 UTC</createdTime>
+<ownerDesignName>ER_diagram</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>32 CHAR</dataTypeSize>
+<ownDataTypeParameters>32 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="priority" id="7CE96BA3-7AAB-C909-8CF3-9CEA360B00BA">
+<createdBy>vupma</createdBy>
+<createdTime>2021-05-04 08:39:28 UTC</createdTime>
+<ownerDesignName>ER_diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8929964F-E7AB-8DEA-32EC-F41E4CA7EB19" name="tcf_PK">
+<createdBy>vupma</createdBy>
+<createdTime>2020-02-23 16:28:27 UTC</createdTime>
+<ownerDesignName>ER_diagram</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6A2EE4D2-8E87-4C2E-F250-5A02FD0C1530"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="97B8A084-1F78-1735-59AE-191898358EEF" name="tcf_uk">
+<createdBy>vupma</createdBy>
+<createdTime>2020-02-23 16:33:31 UTC</createdTime>
+<ownerDesignName>ER_diagram</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D0C59890-FB1C-FEAF-DA2A-BCB0CC267875"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint">
+<tableCheckConstraint name="tcf_ck1" directorySegmentName="seg_0" id="CEF9F3F6-C0E8-0882-844F-92F276C3A215">
+<createdBy>vupma</createdBy>
+<createdTime>2020-02-23 16:38:19 UTC</createdTime>
+<ownerDesignName>EventHandlerER</ownerDesignName>
+<rule>manual_task IN (&apos;Y&apos;, &apos;N&apos;)</rule>
+</tableCheckConstraint>
+</tableCheckConstraints>
+</Table>
