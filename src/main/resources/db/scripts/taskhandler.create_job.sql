@@ -1,3 +1,4 @@
+-- Create sheduled task
 DECLARE 
   v_job_name VARCHAR2(32) := 'HANDLE_TASKS';
 
@@ -17,13 +18,9 @@ BEGIN
     
     DBMS_SCHEDULER.enable(
              name => v_job_name);
-    
-    FOR i in 1..5 loop          
-      SYS.dbms_scheduler.run_job (v_job_name, false); 
-     END LOOP;
 END;
 
-
+-- Start configured jobs 
 DECLARE 
   v_job_name VARCHAR2(32) := 'HANDLE_TASKS';
 BEGIN
@@ -31,24 +28,35 @@ BEGIN
   commit;
   
   FOR i in 1..15 loop          
-    dbms_scheduler.run_job (v_job_name, false); 
-    commit;
+    dbms_scheduler.run_job (v_job_name, false);     
   END LOOP;
 
 END;
 
+-- Check sheduled jobs
+SELECT *
+from user_scheduler_job_run_details
+order by log_date desc;
+
+select *
+from user_scheduler_job_log;
+
+select *
+from user_scheduler_jobs;
+
+-- Just submit jobs
 DECLARE
   v_jobno pls_integer;
 BEGIN
   delete from debug_logs;
   
   FOR i in 1..15 loop
-    dbms_job.submit(v_jobno, 'begin task_handler_job; end;' );
-    commit;
+    dbms_job.submit(v_jobno, 'begin task_handler_job; end;' );    
   END LOOP;
   
   commit;
 END;
 
+-- Check job status
 SELECT *
 from user_jobs;
